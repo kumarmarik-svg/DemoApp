@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card product-page">
+      <h1>Order Summary</h1>
+      
+      <div id="checkout-empty" class="welcome-box" style="display:none">
+        <p>Your cart is empty</p>
+        <button id="empty-back-btn" class="ghost empty-back-btn">Back to Products</button>
+      </div>
+
+      <div id="checkout-content" style="display:none">
+        <div class="checkout-items">
+          <h3>Order Items</h3>
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Qty</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="checkout-items-list"></tbody>
+          </table>
+        </div>
+
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="checkout-subtotal">0.00</span></p>
+          <p class="total-row">Total: $<span id="checkout-total">0.00</span></p>
+        </div>
+
+        <div id="checkout-message" class="status status-spacing"></div>
+
+        <div class="checkout-actions">
+          <button id="confirm-btn" class="checkout-btn">Confirm Order</button>
+          <button id="edit-btn" class="ghost">Edit Cart</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

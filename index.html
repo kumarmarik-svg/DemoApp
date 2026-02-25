@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demo Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1 id="form-title">Sign In</h1>
+
+      <form id="sign-in-form" class="form active">
+        <label>Email
+          <input type="email" id="signin-email" required>
+        </label>
+        <label>Password
+          <input type="password" id="signin-password" required>
+        </label>
+        <div class="show-pass">
+          <input type="checkbox" id="signin-show">
+          <label for="signin-show">Show password</label>
+        </div>
+        <button type="submit">Sign In</button>
+        <div id="signin-status" class="status" aria-live="polite"></div>
+        <p class="muted">Don't have an account? <a href="#" id="to-signup">Sign up</a></p>
+        <p class="muted"><a href="#" id="to-forgot">Forgot password?</a></p>
+      </form>
+
+      <form id="sign-up-form" class="form">
+        <label>Full name
+          <input type="text" id="signup-name" required>
+        </label>
+        <label>Email
+          <input type="email" id="signup-email" required>
+        </label>
+        <label>Password
+          <input type="password" id="signup-password" required>
+        </label>
+        <div class="show-pass">
+          <input type="checkbox" id="signup-show">
+          <label for="signup-show">Show password</label>
+        </div>
+        <button type="submit">Create account</button>
+        <div id="signup-status" class="status" aria-live="polite"></div>
+        <p class="muted">Already have an account? <a href="#" id="to-signin">Sign in</a></p>
+      </form>
+
+    </div>
+  </main>
+
+  <div id="forgot-modal" class="modal hidden">
+    <div class="modal-card">
+      <h2>Reset password</h2>
+      <p class="muted">Enter your email and we'll send a reset link (demo).</p>
+      <form id="forgot-form">
+        <label>Email
+          <input type="email" id="forgot-email" required>
+        </label>
+        <div class="modal-actions">
+          <button type="submit">Send reset link</button>
+          <button type="button" id="forgot-cancel" class="ghost">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

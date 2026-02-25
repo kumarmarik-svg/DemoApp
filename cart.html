@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card product-page">
+      <h1>Shopping Cart</h1>
+      <div id="cart-empty" class="welcome-box">
+        <p>Your cart is empty</p>
+        <button id="empty-back-btn" class="ghost empty-back-btn">Back to Products</button>
+      </div>
+      <div id="cart-content" style="display:none">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+        <div class="cart-summary">
+          <p>Subtotal: $<span id="subtotal">0.00</span></p>
+          <p class="total-row">Total: $<span id="total">0.00</span></p>
+        </div>
+        <div class="cart-actions">
+          <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+          <button id="back-btn" class="ghost">Back to Products</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="cart.js"></script>
+</body>
+</html>

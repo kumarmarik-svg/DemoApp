@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card product-page">
+      <h1>Welcome to Products</h1>
+      <div class="welcome-box">
+        <p>Logged in as: <strong id="logged-user"></strong> | <a href="cart.html" class="cart-link">Cart <span id="cart-badge" class="cart-badge-hidden">0</span></a></p>
+      </div>
+      <div id="filter-container" class="filter-container"></div>
+      <div id="product-grid" class="product-grid"></div>
+      <button id="logout-btn" class="ghost logout">Logout</button>
+    </div>
+  </main>
+
+  <script src="product.js"></script>
+</body>
+</html>
